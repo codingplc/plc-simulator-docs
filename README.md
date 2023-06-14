@@ -1,38 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PLC Simulator Online Documentation Project
 
-## Getting Started
+Welcome to the PLC Simulator Online Documentation Project! This project aims to create comprehensive, user-friendly documentation for our open-source PLC simulator. 
 
-First, run the development server:
+## About
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+This documentation is intended to serve as a complete guide for users and contributors to the PLC simulator. We aim to provide clear, concise information and tutorials to assist with using the simulator to its full potential. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+We welcome and encourage contributions from the community! Whether you're correcting a typo, adding a new section, or improving existing content, your contribution can make a significant difference.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Here are the steps you can follow to contribute:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. **Fork the Repository:** Click on the 'Fork' button at the top right corner of this page and clone the forked repository on your local machine.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. **Create a New Branch:** Use the `git checkout -b branch-name` command to create a new branch. Please choose the branch name that describes your modification.
 
-## Learn More
+3. **Make Your Changes:** Make the changes you want to contribute. These could be adding new content, modifying existing content, or fixing errors.
 
-To learn more about Next.js, take a look at the following resources:
+4. **Commit Your Changes:** Commit the changes with `git commit -m "Commit message"`. Write a clear and concise commit message describing what you have modified or added.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. **Push to GitHub:** Push your commits using `git push origin branch-name`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+6. **Submit a Pull Request:** Go to your repository on GitHub, and click the 'Compare & pull request' button next to your branch. Review your changes and submit the pull request.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under [MIT License](LICENSE).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contact
+
+If you have any questions, feel free to reach out to us at [email](mailto:info@codingplc.com).
+
+We're excited to see your contributions!
