@@ -15,6 +15,9 @@ const config: DocsThemeConfig = {
   footer: {
     text: '© CodingPLC ' + currentYear,
   },
+  sidebar: {
+    toggleButton: true,
+  },
 };
 
 export default config;
