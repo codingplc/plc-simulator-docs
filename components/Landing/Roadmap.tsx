@@ -25,7 +25,7 @@ export default function Roadmap() {
             May 2020
           </time>
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-            Basic ladder elements (contact, coil, branch)
+            Basic ladder elements
           </h3>
           <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
             Implementation of the fundamental building blocks of Ladder Logic, introducing the use
@@ -80,6 +80,17 @@ export default function Roadmap() {
               GitHub repository
             </a>{' '}
             to join in our development efforts.
+          </p>
+        </li>
+        <li className="mb-8 ml-4">
+          <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+          <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+            2024
+          </time>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Simulation panel</h3>
+          <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+            You will be able to connect push buttons switches, LEDs and more sophisticated virtual
+            equipment with the simulator to see the results of your program.
           </p>
         </li>
       </ol>
