@@ -4,7 +4,7 @@ import screenshot from '../../images/simulator-screenshot.png';
 
 export default function Hero() {
   return (
-    <section className="mt-16 mb-16">
+    <section className="mt-16 mb-8">
       <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-5xl dark:text-white">
         PLC Simulator Online
       </h1>
@@ -22,7 +22,7 @@ export default function Hero() {
             href="https://app.plcsimulator.online/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900"
+            className="inline-flex items-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-xl px-5 py-2.5 text-center dark:focus:ring-primary-900"
           >
             Run PLC Simulator Online
             <svg
