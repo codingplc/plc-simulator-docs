@@ -4,7 +4,7 @@ import screenshot from '../../images/simulator-screenshot.png';
 
 export default function Hero() {
   return (
-    <section className="mt-16 mb-8">
+    <section className="mt-16 mb-16">
       <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-5xl dark:text-white">
         PLC Simulator Online
       </h1>
