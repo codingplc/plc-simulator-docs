@@ -14,5 +14,14 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Component {...pageProps} />
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6745225928334897"
+        crossOrigin="anonymous"
+      ></script>
+    </>
+  );
 }
