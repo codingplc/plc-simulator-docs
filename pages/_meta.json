@@ -18,5 +18,14 @@
   "contact": {
     "title": "Contact",
     "type": "page"
+  },
+  "-- More": {
+    "type": "separator",
+    "title": "More"
+  },
+  "next.js-link": {
+    "title": "PLC Simulator Online ↗",
+    "href": "https://app.plcsimulator.online/",
+    "newWindow": true
   }
 }
