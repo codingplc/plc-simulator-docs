@@ -6,7 +6,7 @@ import Features from './Landing/Features';
 
 export default function Landing() {
   return (
-    <div>
+    <div className="max-w-screen-xl mx-auto">
       <Hero />
       <Features />
       <UsersMap />

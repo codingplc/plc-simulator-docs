@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import screenshot from '../../images/simulator-screenshot.png';
+import scDesktop from '../../images/simulator-sc-desk.png';
+import scMobile from '../../images/simulator-sc-mobile.png';
 
 export default function Hero() {
   return (
@@ -8,7 +9,7 @@ export default function Hero() {
       <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-5xl dark:text-white">
         PLC Simulator Online
       </h1>
-      <div className="gap-8 items-center py-8 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-8">
+      <div className="gap-8 items-center py-8 mx-auto xl:gap-16 md:grid md:grid-cols-2 sm:py-8">
         <div className="mt-4 md:mt-0 mb-8">
           <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             Learning Ladder Logic was never easier than now!
@@ -40,12 +41,20 @@ export default function Hero() {
           </a>
         </div>
         <Image
-          className="w-full rounded-lg shadow-lg"
+          className="w-full hidden sm:flex rounded-lg shadow-lg"
           priority
-          src={screenshot}
+          src={scDesktop}
           alt="PLC Simulator Online screenshot"
-          width={800}
-          height={600}
+          width={803}
+          height={565}
+        />
+        <Image
+          className="w-full flex sm:hidden rounded-lg shadow-lg max-w-xs mx-auto"
+          priority
+          src={scMobile}
+          alt="PLC Simulator Online screenshot"
+          width={320}
+          height={543}
         />
       </div>
     </section>
