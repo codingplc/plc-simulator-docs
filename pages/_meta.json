@@ -23,7 +23,7 @@
     "type": "separator",
     "title": "More"
   },
-  "next.js-link": {
+  "simulator-link": {
     "title": "PLC Simulator Online ↗",
     "href": "https://app.plcsimulator.online/",
     "newWindow": true
