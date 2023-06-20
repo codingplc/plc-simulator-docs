@@ -11,7 +11,7 @@ const config: DocsThemeConfig = {
   chat: {
     link: 'https://discord.gg/puVcdjEp4G',
   },
-  docsRepositoryBase: 'https://github.com/Dagryl/plc-simulator-docs',
+  docsRepositoryBase: 'https://github.com/Dagryl/plc-simulator-docs/blob/master/',
   footer: {
     text: '© CodingPLC ' + currentYear,
   },
