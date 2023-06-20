@@ -37,3 +37,5 @@ next-env.d.ts
 # firebase
 firebase-debug.log
 .firebase/
+# Sentry Auth Token
+.sentryclirc

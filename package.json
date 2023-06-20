@@ -11,6 +11,7 @@
     "deploy-beta": "next build && firebase hosting:channel:deploy beta"
   },
   "dependencies": {
+    "@sentry/nextjs": "^7.56.0",
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
