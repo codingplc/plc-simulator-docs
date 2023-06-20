@@ -1,7 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
-import scDesktop from '../../images/simulator-sc-desk.png';
-import scMobile from '../../images/simulator-sc-mobile.png';
 
 export default function Hero() {
   return (
@@ -40,18 +37,16 @@ export default function Hero() {
             </svg>
           </a>
         </div>
-        <Image
+        <img
           className="w-full hidden sm:flex rounded-lg shadow-lg"
-          priority
-          src={scDesktop}
+          src="/images/simulator-sc-desk.png"
           alt="PLC Simulator Online screenshot"
           width={803}
           height={565}
         />
-        <Image
+        <img
           className="w-full flex sm:hidden rounded-lg shadow-lg max-w-xs mx-auto"
-          priority
-          src={scMobile}
+          src="images/simulator-sc-mobile.png"
           alt="PLC Simulator Online screenshot"
           width={320}
           height={543}
