@@ -1,9 +1,10 @@
 {
   "whatis": "What is LD?",
-  "contact": "Contact",
-  "coil": "Coil",
+  "contact": "Contacts",
+  "compare": "Compare Contacts",
+  "coil": "Coils",
   "branch": "Branch",
-  "timer": "Timer",
-  "counter": "Counter",
+  "timer": "Timers",
+  "counter": "Counters",
   "move": "Move"
 }

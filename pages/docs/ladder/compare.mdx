@@ -1,0 +1,32 @@
+# Understanding Compare Contacts
+
+Compare contacts are essential components in Ladder Logic programming. They are used to compare different variables and influence the control flow of the program based on the comparison's outcome.
+
+## Overview
+
+Just like any other elements in Ladder Logic, Compare Contacts are represented using graphical symbols. They operate on two variables, typically comparing a process variable with a setpoint or limit.
+
+```
+<variable_1>
+----|>=|----
+<variable_2>
+```
+
+## Compare Contacts
+
+Compare Contacts come in several types, each one representing a different type of comparison:
+
+- **Equal (==)**: This contact is true when the two variables being compared are equal.
+- **Not Equal (\<\>)**: This contact is true when the two variables being compared are not equal.
+- **Less Than (\<)**: This contact is true when the first variable is less than the second one.
+- **Less Than or Equal (\<\=)**: This contact is true when the first variable is less than or equal to the second one.
+- **Greater Than (>)**: This contact is true when the first variable is greater than the second one.
+- **Greater Than or Equal (>=)**: This contact is true when the first variable is greater than or equal to the second one.
+
+The state of each contact depends on the result of the comparison. If the comparison is true, then the contact is closed (ON), and if the comparison is false, the contact is open (OFF).
+
+## Usage in Control Logic
+
+Compare contacts are crucial in creating control logic for PLC programming. They allow you to create conditions based on the relationships between different variables. For example, you could use a **Greater Than (>)** contact to check if a tank's level is above a certain point, and if so, close a valve to prevent overflow.
+
+In summary, understanding compare contacts is fundamental to working with Ladder Logic. It allows for more complex control logic by comparing variables and influencing the program flow based on these comparisons.

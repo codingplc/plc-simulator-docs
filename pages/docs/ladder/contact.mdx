@@ -1,5 +1,57 @@
-# Contact
+# An Insight into Contacts in PLC Programming
 
-import { Callout } from 'nextra-theme-docs';
+In the context of Programmable Logic Controllers (PLCs), a **_Contact_** is a component of a ladder diagram, which is one of the programming languages defined in the IEC 61131-3 standard. Ladder diagrams are graphical and resemble electrical relay logic schematics, which makes them intuitive for electrical engineers and technicians.
 
-<Callout type="warning">Docs for this topic are under construction.</Callout>
+## Normally Open (NO) Contact
+
+```
+<bool_variable>
+------| |------
+```
+
+The state ot the left link is copied to the right link it the state ot the associated boolean variable is **TRUE**. Otherwise, the state of the right link is **FALSE**.
+to put it in another way, it acts like a switch that is normally open (off) and closes (on) when the associated condition is **TRUE**.
+
+## Normally Closed (NC) Contact
+
+```
+<bool_variable>
+------|\|------
+```
+
+The state of the left link is copied to the right link if the state of the associated boolean variable is **FALSE**. Otherwise, the state of the right link is **FALSE**.
+In other words, it acts like a switch that is normally closed (on) and opens (off) when the associated condition is **TRUE**.
+
+## Positive Transition-Sensing Contact
+
+```
+<bool_variable>
+------|P|------
+```
+
+The state ot the right link is TRUE from one evaluation of this element to the next when a transition of the associated boolean variable from
+**FALSE** to **TRUE** is sensed at the same time that the state of the left link is **TRUE** The state ot the right link shall be **FALSE** at all other times.
+
+## Negative Transition-Sensing Contact
+
+```
+<bool_variable>
+------|N|------
+```
+
+The state ot the right link is TRUE from one evaluation of this element to the next when a transition of the associated boolean variable from
+**TRUE** to **FALSE** is sensed at the same time that the state of the left link is **TRUE** The state ot the right link shall be **FALSE** at all other times.
+
+## How are Contacts Used?
+
+**_Contacts_** are used to create logical conditions in your PLC program. For example, you might have a **_Contact_** that checks if a button is pressed. If the button is pressed (condition is **TRUE**), a Normally Open **_Contact_** would close and allow logic flow, triggering other parts of the program.
+
+On the other hand, a Normally Closed **_Contact_** would open and stop the logic flow if the same button is pressed. When the button is not pressed (condition is **FALSE**), the Normally Closed **_Contact_** would close and allow logic flow.
+
+Transition-sensing **_Contacts_** are used when you want to detect a change in the state of a condition. For example, a Positive Transition-Sensing **_Contact_** would close (allow logic flow) only at the moment when the associated condition changes from **FALSE** to **TRUE**.
+
+## Conclusion
+
+Understanding **_Contacts_** is a fundamental part of learning to program PLCs, especially if you're using ladder diagrams. They provide a simple and intuitive way to create conditions and control the flow of your program.
+
+The state ot the left link is copied to the right link it the state ot the associated Boolean variable indicated by or. Otherwise, the state of the right link is OFF

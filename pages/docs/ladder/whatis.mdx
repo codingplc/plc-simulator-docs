@@ -8,7 +8,7 @@ Just as the name suggests, Ladder Logic is a type of programming that resembles 
 
 ## Ladder Diagram (LD)
 
-The Ladder Diagram (LD) is the language used for creating ladder logic. The diagram looks like a two-rail ladder with horizontal "rungs" between the two vertical "rails". These "rails" bound the LD networks from the left and right. The left rail is always considered ON (powered), while the right rail doesn't have a defined state.
+The Ladder Diagram (LD) is the language used for creating ladder logic. The diagram looks like a two-rail ladder with horizontal **_Rungs_** between the two vertical **_Power Rails_**. These **_Power Rails_** bound the LD networks from the left and right. The left **_Power Rail_** is always considered ON (powered), while the right rail doesn't have a defined state.
 
 ## Power Rails
 
@@ -16,7 +16,7 @@ These are the vertical lines on either side of the diagram. They represent the p
 
 ## Elements and States
 
-The elements are the components between the rails. They can be horizontal or vertical. Each of these elements has a state, either ON or OFF, corresponding to the literal Boolean values of 1 or 0 respectively.
+The elements are the components between the rails. They can be horizontal or vertical. Each of these elements has a state, either ON or OFF, corresponding to the literal Boolean values of **TRUE** (1) or **FALSE** (0) respectively.
 
 - Horizontal Link Element: This is represented by a horizontal line and passes the state of the element on its left to the element on its right.
 - Vertical Link Element: This consists of a vertical line that intersects one or more horizontal link elements on each side. The state of the vertical link represents the inclusive OR of the ON states of the horizontal links on its left side. The state of the vertical link is copied to all the horizontal links on its right, but not to the ones on its left.

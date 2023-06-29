@@ -1,6 +1,7 @@
 {
   "index": "Introduction",
   "tutorial": "Tutorial",
+  "iec61131-3": "IEC 61131-3",
   "ladder": "Ladder Diagram (LD)",
   "sharing": "Sharing"
 }

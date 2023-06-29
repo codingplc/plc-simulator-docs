@@ -1,5 +1,38 @@
-# Coil
+# An Exploration of Coils in PLC Programming
 
-import { Callout } from 'nextra-theme-docs';
+In the realm of Programmable Logic Controllers (PLCs) programming, a **_Coil_** is an element of a ladder diagram, a programming language defined in the IEC 61131-3 standard. Ladder diagrams are visual and closely resemble electrical relay logic schematics, which make them user-friendly for electrical engineers and technicians.
 
-<Callout type="warning">Docs for this topic are under construction.</Callout>
+## Output Coil
+
+```
+<bool_variable>
+------( )------
+```
+
+An Output Coil can be compared to a light bulb in a simple circuit. If power (logic) flows to the Coil, the associated boolean variable's state is set to **TRUE** (or ON). If no power (logic) flows to the Coil, the variable's state is **FALSE** (or OFF). This means that the state of an Output Coil depends on the conditions before it in the logic flow.
+
+## Set Coil
+
+```
+<bool_variable>
+------(S)------
+```
+
+A Set Coil is a special type of coil that sets the state of its associated boolean variable to **TRUE** whenever power (logic) flows to it. Once the variable is set, it remains **TRUE** until it is reset by another part of the program, even if power (logic) stops flowing to the Set Coil.
+
+## Reset Coil
+
+```
+<bool_variable>
+------(R)------
+```
+
+A Reset Coil is the opposite of a Set Coil. It sets the state of its associated boolean variable to **FALSE** whenever power (logic) flows to it. Once the variable is reset, it remains **FALSE** until it is set by another part of the program, even if power (logic) stops flowing to the Reset Coil.
+
+## How are Coils Used?
+
+**_Coils_** play a crucial role in defining the logic of a PLC program. For instance, an Output Coil might be used to turn on a motor or a light when certain conditions are met. Set and Reset Coils are used to maintain a certain state until another action occurs in the program.
+
+## Conclusion
+
+**_Coils_** play a pivotal role in PLC programming, especially in the context of ladder diagrams. These components allow you to establish intricate control logic within your program, directly influencing the operations of connected devices such as motors, sensors, or lights. Mastering the application of Coils is not only essential for creating efficient PLC programs but also for effectively controlling and managing your automated processes. Grasping this fundamental concept is a significant step towards becoming proficient in PLC programming.
