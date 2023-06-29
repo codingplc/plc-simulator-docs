@@ -1,5 +1,30 @@
-# What is Ladder Logic?
+# Understanding Ladder Logic in IEC 61131-3
 
-import { Callout } from 'nextra-theme-docs';
+Ladder Logic is a programming language used in Programmable Logic Controllers (PLCs). It is defined by the IEC 61131-3 standard, which is an international standard for PLC programming languages.
 
-<Callout type="warning">Docs for this topic are under construction.</Callout>
+## Overview
+
+Just as the name suggests, Ladder Logic is a type of programming that resembles a ladder. It's a graphical language, meaning it's based on images or symbols, rather than text, which makes it more accessible for people who don't have a background in coding.
+
+## Ladder Diagram (LD)
+
+The Ladder Diagram (LD) is the language used for creating ladder logic. The diagram looks like a two-rail ladder with horizontal "rungs" between the two vertical "rails". These "rails" bound the LD networks from the left and right. The left rail is always considered ON (powered), while the right rail doesn't have a defined state.
+
+## Power Rails
+
+These are the vertical lines on either side of the diagram. They represent the power source for the logic in the diagram, with the left rail being the power source and the right rail being the point of consumption.
+
+## Elements and States
+
+The elements are the components between the rails. They can be horizontal or vertical. Each of these elements has a state, either ON or OFF, corresponding to the literal Boolean values of 1 or 0 respectively.
+
+- Horizontal Link Element: This is represented by a horizontal line and passes the state of the element on its left to the element on its right.
+- Vertical Link Element: This consists of a vertical line that intersects one or more horizontal link elements on each side. The state of the vertical link represents the inclusive OR of the ON states of the horizontal links on its left side. The state of the vertical link is copied to all the horizontal links on its right, but not to the ones on its left.
+
+This might seem a bit complex, but with a basic understanding of these components, you can start to read and understand ladder logic diagrams. With a bit of practice, you'll be able to follow the logic in the diagrams, just like reading a book from left to right.
+
+## Graphical Symbols
+
+Instead of written code, LD uses standardized graphical symbols, which can be easier to understand for people without a background in coding.
+
+In summary, Ladder Logic, defined by the IEC 61131-3 standard, is a graphical language that represents logical operations in a way that is visually straightforward and can be understood even by those without programming knowledge.

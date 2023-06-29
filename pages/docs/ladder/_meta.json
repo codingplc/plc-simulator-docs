@@ -1,10 +1,9 @@
 {
-  "whatis": "What is Ladder Logic?",
+  "whatis": "What is LD?",
   "contact": "Contact",
   "coil": "Coil",
   "branch": "Branch",
   "timer": "Timer",
   "counter": "Counter",
-  "move": "Move",
-  "compare": "Compare"
+  "move": "Move"
 }
