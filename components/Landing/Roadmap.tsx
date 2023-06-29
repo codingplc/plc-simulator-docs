@@ -89,7 +89,7 @@ export default function Roadmap() {
           </time>
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Simulation panel</h3>
           <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-            You will be able to connect push buttons switches, LEDs and more sophisticated virtual
+            You will be able to connect push buttons, switches, LEDs and more sophisticated virtual
             equipment with the simulator to see the results of your program.
           </p>
         </li>
