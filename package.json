@@ -8,7 +8,7 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && firebase deploy",
+    "deploy": "next build && next-sitemap && firebase deploy",
     "deploy-beta": "next build && firebase hosting:channel:deploy beta"
   },
   "dependencies": {
