@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "deploy": "next build && firebase deploy",
@@ -19,6 +20,7 @@
     "eslint-config-next": "13.4.6",
     "firebase": "^9.22.2",
     "next": "13.4.6",
+    "next-sitemap": "^4.1.8",
     "nextra": "^2.7.1",
     "nextra-theme-docs": "^2.7.1",
     "postcss": "8.4.24",

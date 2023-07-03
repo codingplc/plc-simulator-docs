@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://plcsimulator.online
+
+# Sitemaps
+Sitemap: https://plcsimulator.online/sitemap.xml
