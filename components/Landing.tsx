@@ -3,6 +3,7 @@ import UsersMap from './Landing/UsersMap';
 import Roadmap from './Landing/Roadmap';
 import Hero from './Landing/Hero';
 import Features from './Landing/Features';
+import Conveyor from './Landing/Conveyor';
 
 export default function Landing() {
   return (
@@ -11,6 +12,7 @@ export default function Landing() {
       <Features />
       <UsersMap />
       <Roadmap />
+      <Conveyor />
     </div>
   );
 }

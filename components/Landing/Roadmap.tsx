@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Roadmap() {
   return (
-    <section className="mb-8">
+    <section className="my-16">
       <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-3xl dark:text-white">
         Roadmap
       </h2>

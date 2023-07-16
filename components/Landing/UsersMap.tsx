@@ -4,7 +4,7 @@ import userWorldMap from '../../svg/userWorldMap.svg';
 
 export default function UsersMap() {
   return (
-    <section className="mb-16">
+    <section className="my-8">
       <h2 className="mb-6 text-3xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-3xl dark:text-white">
         Join users from 187 countries
       </h2>

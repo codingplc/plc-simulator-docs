@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -16,26 +17,30 @@ export default function Hero() {
             coding application. We are working on a tool you can use to improve and share your
             programming knowledge. Save yourself time and money.
           </p>
-          <a
-            href="https://app.plcsimulator.online/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center text-white bg-primary-800 hover:bg-primary-900 focus:ring-4 font-medium rounded-lg text-xl px-5 py-2.5 text-center"
-          >
-            Run PLC Simulator Online ↗
-          </a>
+          <div className="flex justify-center py-4">
+            <a
+              href="https://app.plcsimulator.online/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-white bg-primary-800 hover:bg-primary-900 focus:ring-4 font-medium rounded-lg text-xl px-5 py-2.5 text-center"
+            >
+              Run PLC Simulator Online ↗
+            </a>
+          </div>
         </div>
-        <img
+        <Image
           className="w-full hidden sm:flex rounded-lg shadow-lg"
-          src="/images/simulator-sc-desk.png"
+          src="/images/simulator-sc-desk.jpg"
           alt="PLC Simulator Online screenshot"
+          priority
           width={803}
           height={565}
         />
-        <img
+        <Image
           className="w-full flex sm:hidden rounded-lg shadow-lg max-w-xs mx-auto"
-          src="images/simulator-sc-mobile.png"
+          src="images/simulator-sc-mobile.jpg"
           alt="PLC Simulator Online screenshot"
+          priority
           width={320}
           height={543}
         />

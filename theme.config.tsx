@@ -32,15 +32,32 @@ const config: DocsThemeConfig = {
   },
   head: (
     <>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta
-        property="og:title"
-        content="PLC Simulator Online Documentation - Learn & Master PLC Programming"
+        name="description"
+        content="Explore our comprehensive PLC Simulator Online Documentation for insightful guides on ladder logic creation, simulation, and sharing. Perfect your PLC programming skills and join our growing community of professionals and enthusiasts."
       />
+
+      <meta property="og:url" content="https://plcsimulator.online/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="PLC Simulator Online - Learn & Master PLC Programming" />
       <meta
         property="og:description"
         content="Explore our comprehensive PLC Simulator Online Documentation for insightful guides on ladder logic creation, simulation, and sharing. Perfect your PLC programming skills and join our growing community of professionals and enthusiasts."
       />
+      <meta property="og:image" content="https://plcsimulator.online/images/og-image.jpg" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:domain" content="plcsimulator.online" />
+      <meta property="twitter:url" content="https://plcsimulator.online/" />
+      <meta
+        name="twitter:title"
+        content="PLC Simulator Online Documentation - Learn & Master PLC Programming"
+      />
+      <meta
+        name="twitter:description"
+        content="Explore our comprehensive PLC Simulator Online Documentation for insightful guides on ladder logic creation, simulation, and sharing. Perfect your PLC programming skills and join our growing community of professionals and enthusiasts."
+      />
+      <meta name="twitter:image" content="https://plcsimulator.online/images/og-image.jpg" />
     </>
   ),
   navbar: {
@@ -57,11 +74,10 @@ const config: DocsThemeConfig = {
   },
   useNextSeoProps() {
     const { asPath } = useRouter();
-    if (asPath !== '/') {
-      return {
-        titleTemplate: '%s – PLC Documentation',
-      };
-    }
+    const titleTemplate = asPath === '/' ? 'PLC Simulator Online' : '%s – Learn Ladder Logic';
+    return {
+      titleTemplate,
+    };
   },
 };
 
