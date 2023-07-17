@@ -24,12 +24,27 @@ Here are the steps you can follow to contribute:
 
 6. **Submit a Pull Request:** Go to your repository on GitHub, and click the 'Compare & pull request' button next to your branch. Review your changes and submit the pull request.
 
+## Reporting Bugs and Requesting Features for PLC Simulator
+
+Even though the source code of our main project, `plc-simulator`, is not public, we value and greatly appreciate feedback, bug reports, and feature requests from our users. We use the `plc-simulator-docs` repository as a hub for this purpose. 
+
+Please use the **Issues** section of this `plc-simulator-docs` repository to report any problems you encounter or to request new features. Here's how you can do that:
+
+1. Navigate to the [Issues](https://github.com/dagryl/plc-simulator-docs/issues) tab of the `plc-simulator-docs` repository.
+2. Click on the **New issue** button.
+3. Write a descriptive title and provide as much detail as possible in the body of the issue. If you're reporting a bug, include steps to reproduce the bug, the expected behavior, and the actual behavior. If you're requesting a feature, describe the feature, why you think it would be useful, and how you imagine it might work.
+4. Click on **Submit new issue**.
+
+Our development team monitors the issues here regularly, and we'll do our best to address your bug reports and feature requests in a timely manner. You're also welcome to contribute to discussions on existing issues.
+
+Thank you for helping us improve the `plc-simulator`!
+
 ## License
 
 This project is licensed under [MIT License](LICENSE).
 
 ## Contact
 
-If you have any questions, feel free to reach out to us at [email](mailto:info@codingplc.com).
+If you have any questions, feel free to contact us at [email](mailto:info@codingplc.com).
 
 We're excited to see your contributions!
