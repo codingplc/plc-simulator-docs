@@ -1,5 +1,55 @@
-# Branch
+import Image from 'next/image';
 
-import { Callout } from 'nextra-theme-docs';
+# Branches and Links in Ladder Diagrams
 
-<Callout type="warning">Docs for this topic are under construction.</Callout>
+Ladder diagrams are an essential part of programmable logic controller (PLC) programming and are widely used to represent the logic of electrical control circuits. Within these diagrams, branches and links play a crucial role in defining the flow of control.
+
+## Link Elements: Basics
+
+As defined in IEC-61131-3, link elements may be horizontal or vertical, with states denoted as **ON** or **OFF**. Link elements are integral in transmitting states and are synonymous with power flow, which is represented by green color during simulation.
+
+<Image
+  className="mt-8 rounded-lg shadow-lg"
+  src="/images/rung-with-comments.png"
+  alt="Ladder Diagram Rung with Comments"
+  priority
+  width={683}
+  height={232}
+/>
+
+### Horizontal Link Elements:
+
+- Represented by a horizontal line.
+- Transmit the state from left to right.
+
+### Vertical Link Elements:
+
+- Consist of vertical lines intersecting horizontal links.
+- Represent the _inclusive OR_ of the **ON** states of the horizontal links on the left.
+- Vertical links are used to create branches.
+
+## Branching in Ladder Diagrams
+
+Branching allows for parallel paths within the ladder diagram. By utilizing vertical link elements, one can create branches that enable multiple conditions to be checked simultaneously.
+
+### Creating Branches:
+
+- Drag and drop branch from the toolbar onto rung or element.
+- Add new elements to the lower branch.
+- The state of the vertical link represents the _inclusive OR_ of the **ON** states of the horizontal links on its left side.
+- The vertical link's state is copied to all attached horizontal links on its right. **ON** state is represented by green color during simulation.
+
+## Practical Applications
+
+Branches and links enable complex control logic to be visually represented in a ladder diagram. They allow for simultaneous checks and operations, providing flexibility in designing control systems.
+
+## Examples:
+
+- [Contact series connection (**AND**)](https://app.plcsimulator.online/q2X95slwWQqoJALtAueH)
+- [Contact parallel connection (**OR**)](https://app.plcsimulator.online/XvnYT5s0SszMYd3uetJz)
+- [Nested branches](https://app.plcsimulator.online/Fs5eK3JOn8G1ForaWIWq)
+- [Motor start/stop control with sustain](https://app.plcsimulator.online/U04kp0Rz5AXyQFSkAyTA)
+
+## Conclusion
+
+In the realm of PLC programming, branches and links in ladder diagrams are fundamental. Horizontal link elements transmit states and vertical links enable branching, allowing for complex logic to be organized and visualized. This approach provides the ability to manage multiple conditions at once, offering flexibility and efficiency in control system design. Whether it's parallel branching or nested conditions, the use of branches and links simplifies the understanding of complex circuits. The combination of these elements results in a coherent and accessible representation, making the task of designing and troubleshooting electrical controls more intuitive and effective.
