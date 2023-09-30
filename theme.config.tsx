@@ -49,10 +49,7 @@ const config: DocsThemeConfig = {
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:domain" content="plcsimulator.online" />
       <meta property="twitter:url" content="https://plcsimulator.online/" />
-      <meta
-        name="twitter:title"
-        content="PLC Simulator Online Documentation - Learn & Master PLC Programming"
-      />
+      <meta name="twitter:title" content="PLC Simulator Online Documentation - Learn & Master PLC Programming" />
       <meta
         name="twitter:description"
         content="Explore our comprehensive PLC Simulator Online Documentation for insightful guides on ladder logic creation, simulation, and sharing. Perfect your PLC programming skills and join our growing community of professionals and enthusiasts."
@@ -74,7 +71,7 @@ const config: DocsThemeConfig = {
   },
   useNextSeoProps() {
     const { asPath } = useRouter();
-    const titleTemplate = asPath === '/' ? 'PLC Simulator Online' : '%s – Learn Ladder Logic';
+    const titleTemplate = asPath === '/' ? 'PLC Simulator Online Documentation' : '%s - Learn Ladder Logic';
     return {
       titleTemplate,
     };
