@@ -6,5 +6,6 @@
   "branch": "Branch/Link",
   "timer": "Timers",
   "counter": "Counters",
+  "math": "Math",
   "move": "Move"
 }

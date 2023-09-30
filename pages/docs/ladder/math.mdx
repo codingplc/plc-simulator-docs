@@ -1,0 +1,136 @@
+import { Callout } from 'nextra-theme-docs';
+import FunctionBlock from '@/components/ladder/FunctionBlock';
+
+# Math Functions in Ladder Diagram
+
+Basic math functions like `ADD`, `SUB`, `MUL`, and `DIV` are used for fundamental arithmetic operations. `ADD` performs addition, `SUB` handles subtraction, `MUL` carries out multiplication, and `DIV` conducts division. These functions take in operands as inputs and deliver the calculated results as outputs, serving as building blocks for more complex control logic in industrial automation.
+
+## Symbol
+
+<FunctionBlock
+  blockVarName={null}
+  inOutNames={['EN', 'ENO']}
+  params={{
+    in: [
+      { desc: 'IN1', varName: undefined, isRequired: true, value: undefined },
+      { desc: 'IN2', varName: undefined, isRequired: true, value: undefined },
+    ],
+    out: [{ desc: 'OUT', varName: undefined, isRequired: true, value: undefined }],
+  }}
+  type={'ADD'}
+/>
+
+## Configuration
+
+Two input parameters, `IN1` and `IN2`, along with one output parameter, `OUT`, are required for each basic math function in Ladder Logic. The function block is controlled by two additional parameters: `EN` for enabling and `ENO` for indicating that the block is enabled. Specifically, `EN` activates the function block, while `ENO` confirms its active status. The operands for the calculation are fed into `IN1` and `IN2`, and the computed result is stored in `OUT`.
+
+It's important to note that only **Number** or **Time** variable types are permitted for these input and output parameters.
+
+<FunctionBlock
+  blockVarName={null}
+  inOutNames={['EN', 'ENO']}
+  params={{
+    in: [
+      { desc: 'IN1', varName: 'InputNumber1', isRequired: true, value: 10 },
+      { desc: 'IN2', varName: undefined, isRequired: true, value: undefined },
+    ],
+    out: [{ desc: 'OUT', varName: undefined, isRequired: true, value: undefined }],
+  }}
+  type={'ADD'}
+/>
+
+## Runtime Behavior
+
+When `EN` is set to `true`, the math function gets executed. The result is stored in `OUT`, and `ENO` also becomes `true` to indicate the function is active. If `EN` is set to `false`, the function is disabled, and `ENO` is set to `false` to confirm it's turned off. If `EN` remains `true`, the function will run in every cycle scan. To run the function only a single time, you can use Positive or Negative Transition-Sensing Contacts.
+
+<FunctionBlock
+  blockVarName={null}
+  inOutNames={['EN', 'ENO']}
+  params={{
+    in: [
+      { desc: 'IN1', varName: 'InputNumber1', isRequired: true, value: 10 },
+      { desc: 'IN2', varName: 'InputNumber2', isRequired: true, value: 2 },
+    ],
+    out: [{ desc: 'OUT', varName: 'OutputNumber', isRequired: true, value: 8 }],
+  }}
+  type={'SUB'}
+  simulation
+/>
+
+## Addition
+
+`Result = Input1 + Input2`
+
+<FunctionBlock
+  blockVarName={null}
+  inOutNames={['EN', 'ENO']}
+  params={{
+    in: [
+      { desc: 'IN1', varName: 'Input1', isRequired: true, value: 10 },
+      { desc: 'IN2', varName: 'Input2', isRequired: true, value: 2 },
+    ],
+    out: [{ desc: 'OUT', varName: 'Result', isRequired: true, value: 12 }],
+  }}
+  type={'ADD'}
+  simulation
+/>
+
+## Subtraction
+
+`Result = Input1 - Input2`
+
+<FunctionBlock
+  blockVarName={null}
+  inOutNames={['EN', 'ENO']}
+  params={{
+    in: [
+      { desc: 'IN1', varName: 'Input1', isRequired: true, value: 10 },
+      { desc: 'IN2', varName: 'Input2', isRequired: true, value: 2 },
+    ],
+    out: [{ desc: 'OUT', varName: 'Result', isRequired: true, value: 8 }],
+  }}
+  type={'SUB'}
+  simulation
+/>
+
+## Multiplication
+
+`Result = Input1 * Input2`
+
+<FunctionBlock
+  blockVarName={null}
+  inOutNames={['EN', 'ENO']}
+  params={{
+    in: [
+      { desc: 'IN1', varName: 'Input1', isRequired: true, value: 10 },
+      { desc: 'IN2', varName: 'Input2', isRequired: true, value: 2 },
+    ],
+    out: [{ desc: 'OUT', varName: 'Result', isRequired: true, value: 20 }],
+  }}
+  type={'MUL'}
+  simulation
+/>
+
+## Division
+
+`Result = Input1 / Input2`
+
+<FunctionBlock
+  blockVarName={null}
+  inOutNames={['EN', 'ENO']}
+  params={{
+    in: [
+      { desc: 'IN1', varName: 'Input1', isRequired: true, value: 10 },
+      { desc: 'IN2', varName: 'Input2', isRequired: true, value: 2 },
+    ],
+    out: [{ desc: 'OUT', varName: 'Result', isRequired: true, value: 5 }],
+  }}
+  type={'DIV'}
+  simulation
+/>
+
+## Examples
+
+- [Addition executed every cycle scan](https://app.plcsimulator.online/CtI3jaZb0xKIshCbCnFe)
+- [Substraction executed every second](https://app.plcsimulator.online/a34QmRnl3B8p1xnbg07m)
+- [Transition-Sensing Addition](https://app.plcsimulator.online/eQXiN1NaPhCKNJhC9r31)
