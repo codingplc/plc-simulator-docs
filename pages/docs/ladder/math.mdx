@@ -3,7 +3,7 @@ import FunctionBlock from '@/components/ladder/FunctionBlock';
 
 # Math Functions in Ladder Diagram
 
-Basic math functions like `ADD`, `SUB`, `MUL`, and `DIV` are used for fundamental arithmetic operations. `ADD` performs addition, `SUB` handles subtraction, `MUL` carries out multiplication, and `DIV` conducts division. These functions take in operands as inputs and deliver the calculated results as outputs, serving as building blocks for more complex control logic in industrial automation.
+Basic math functions like **ADD**, **SUB**, **MUL**, and **DIV** are used for fundamental arithmetic operations. **ADD** performs addition, **SUB** handles subtraction, **MUL** carries out multiplication, and **DIV** conducts division. These functions take in operands as inputs and deliver the calculated results as outputs, serving as building blocks for more complex control logic in industrial automation.
 
 ## Symbol
 
@@ -22,7 +22,7 @@ Basic math functions like `ADD`, `SUB`, `MUL`, and `DIV` are used for fundamenta
 
 ## Configuration
 
-Two input parameters, `IN1` and `IN2`, along with one output parameter, `OUT`, are required for each basic math function in Ladder Logic. The function block is controlled by two additional parameters: `EN` for enabling and `ENO` for indicating that the block is enabled. Specifically, `EN` activates the function block, while `ENO` confirms its active status. The operands for the calculation are fed into `IN1` and `IN2`, and the computed result is stored in `OUT`.
+Two input parameters, **IN1** and **IN2**, along with one output parameter, **OUT**, are required for each basic math function in Ladder Logic. The function block is controlled by two additional parameters: **EN** for enabling and **ENO** for indicating that the block is enabled. Specifically, **EN** activates the function block, while **ENO** confirms its active status. The operands for the calculation are fed into **IN1** and **IN2**, and the computed result is stored in **OUT**.
 
 It's important to note that only **Number** or **Time** variable types are permitted for these input and output parameters.
 
@@ -41,7 +41,7 @@ It's important to note that only **Number** or **Time** variable types are permi
 
 ## Runtime Behavior
 
-When `EN` is set to `true`, the math function gets executed. The result is stored in `OUT`, and `ENO` also becomes `true` to indicate the function is active. If `EN` is set to `false`, the function is disabled, and `ENO` is set to `false` to confirm it's turned off. If `EN` remains `true`, the function will run in every cycle scan. To run the function only a single time, you can use Positive or Negative Transition-Sensing Contacts.
+When **EN** is set to **true**, the math function gets executed. The result is stored in **OUT**, and **ENO** also becomes **true** to indicate the function is active. If **EN** is set to **false**, the function is disabled, and **ENO** is set to **false** to confirm it's turned off. If **EN** remains **true**, the function will run in every cycle scan. To run the function only a single time, you can use Positive or Negative Transition-Sensing Contacts.
 
 <FunctionBlock
   blockVarName={null}
@@ -95,7 +95,7 @@ When `EN` is set to `true`, the math function gets executed. The result is store
 
 ## Multiplication
 
-`Result = Input1 * Input2`
+`Result = Input1 \* Input2`
 
 <FunctionBlock
   blockVarName={null}

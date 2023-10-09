@@ -1,5 +1,57 @@
-# Move
+import FunctionBlock from '@/components/ladder/FunctionBlock';
 
-import { Callout } from 'nextra-theme-docs';
+# Move in Ladder Logic Programming
 
-<Callout type="warning">Docs for this topic are under construction.</Callout>
+The **MOVE** function is used for transferring data from one location to another within the PLC memory. It takes a source operand as an input and copies its value to a specified destination operand. This action allows for data manipulation and serves as a foundational element in creating more complex control logic in industrial automation.
+
+## Symbol
+
+<FunctionBlock
+  blockVarName={null}
+  inOutNames={['EN', 'ENO']}
+  params={{
+    in: [{ desc: 'IN', varName: undefined, isRequired: true, value: undefined }],
+    out: [{ desc: 'OUT', varName: undefined, isRequired: true, value: undefined }],
+  }}
+  type={'MOVE'}
+/>
+
+## Configuration
+
+One input parameter **IN**, along with one output parameter, **OUT**, are required for **MOVE** function in Ladder Logic. The function block is controlled by two additional parameters: **EN** for enabling and **ENO** for indicating that the block is enabled. Specifically, **EN** activates the function block, while **ENO** confirms its active status.
+
+It's important to note that only **Number** or **Time** variable types are permitted for these input and output parameters.
+
+<FunctionBlock
+  blockVarName={null}
+  inOutNames={['EN', 'ENO']}
+  params={{
+    in: [{ desc: 'IN', varName: 'Input', isRequired: true, value: 10 }],
+    out: [{ desc: 'OUT', varName: undefined, isRequired: true, value: undefined }],
+  }}
+  type={'MOVE'}
+/>
+
+## Runtime Behavior
+
+When **EN** is set to **true**, the **MOVE** function gets executed. The **IN** is assigned to **OUT**, and **ENO** becomes **true** to indicate the function is active. If **EN** is set to **false**, the function is disabled, and **ENO** is set to **false** to confirm it's turned off.
+
+If **EN** remains **true**, the function will run in every cycle scan. To run the function only a single time, you can use Positive or Negative Transition-Sensing Contacts.
+
+<FunctionBlock
+  blockVarName={null}
+  inOutNames={['EN', 'ENO']}
+  params={{
+    in: [{ desc: 'IN', varName: 'Input', isRequired: true, value: 10 }],
+    out: [{ desc: 'OUT', varName: 'Output', isRequired: true, value: 10 }],
+  }}
+  type={'SUB'}
+  simulation
+/>
+
+`Output = Input`
+
+## Examples
+
+- [Ladder diagram state management](https://app.plcsimulator.online/lGAra7y0IBTyveim0Rsp)
+- [Preset time change with MOVE](https://app.plcsimulator.online/nylRtY9YWjHJozVsE22L)
