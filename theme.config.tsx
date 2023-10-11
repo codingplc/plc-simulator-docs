@@ -71,7 +71,7 @@ const config: DocsThemeConfig = {
   },
   useNextSeoProps() {
     const { asPath } = useRouter();
-    const titleTemplate = asPath === '/' ? 'PLC Simulator Online Documentation' : '%s - Learn Ladder Logic';
+    const titleTemplate = asPath === '/' ? 'PLC Simulator Online & Ladder Logic Documentation' : '%s - Learn Ladder Logic';
     return {
       titleTemplate,
     };
