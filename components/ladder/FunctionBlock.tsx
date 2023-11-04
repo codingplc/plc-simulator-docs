@@ -15,6 +15,7 @@ export default function FunctionBlock(props: Props) {
   const rows = 4 + paramsCount;
   return (
     <div
+      className="mt-2"
       style={{
         boxSizing: 'border-box',
         display: 'inline-grid',
@@ -55,10 +56,11 @@ export default function FunctionBlock(props: Props) {
           }}
         >
           <span
+            className=""
             style={{
               fontWeight: blockVarName === undefined ? 'bold' : '500',
               fontSize: '0.875em',
-              color: blockVarName === undefined ? '#FF0000' : '#3D3D3D',
+              color: blockVarName === undefined ? '#FF0000' : '',
               whiteSpace: 'nowrap',
             }}
           >

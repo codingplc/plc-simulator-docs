@@ -1,5 +1,119 @@
-# Counter
-
 import { Callout } from 'nextra-theme-docs';
+import FunctionBlock from '@/components/ladder/FunctionBlock';
 
-<Callout type="warning">Docs for this topic are under construction.</Callout>
+# Counter Functions in Ladder Diagram
+
+Counters are used to count occurrences of events. They come in three primary types: **CTU (Count Up)**, **CTD (Count Down)**, and **CTUD (Count Up Down)**, each serving different purposes within a control system.
+
+## Symbols
+
+<div className="flex gap-8 flex-wrap">
+  <FunctionBlock
+    blockVarName={undefined}
+    inOutNames={['CU', 'Q']}
+    params={{
+      in: [
+        { desc: 'R', varName: undefined, isRequired: false, value: undefined },
+        { desc: 'PV', varName: undefined, isRequired: false, value: undefined },
+      ],
+      out: [, { desc: 'CV', varName: undefined, isRequired: false, value: undefined }],
+    }}
+    type={'CTU'}
+  />
+  <FunctionBlock
+    blockVarName={undefined}
+    inOutNames={['CD', 'Q']}
+    params={{
+      in: [
+        { desc: 'LD', varName: undefined, isRequired: false, value: undefined },
+        { desc: 'PV', varName: undefined, isRequired: false, value: undefined },
+      ],
+      out: [, { desc: 'CV', varName: undefined, isRequired: false, value: undefined }],
+    }}
+    type={'CTD'}
+  />
+  <FunctionBlock
+    blockVarName={undefined}
+    inOutNames={['CU', 'QU']}
+    params={{
+      in: [
+        { desc: 'CD', varName: undefined, isRequired: false, value: undefined },
+        { desc: 'R', varName: undefined, isRequired: false, value: undefined },
+        { desc: 'LD', varName: undefined, isRequired: false, value: undefined },
+        { desc: 'PV', varName: undefined, isRequired: false, value: undefined },
+      ],
+      out: [
+        { desc: 'QD', varName: undefined, isRequired: false, value: undefined },
+        ,
+        ,
+        { desc: 'CV', varName: undefined, isRequired: false, value: undefined },
+      ],
+    }}
+    type={'CTUD'}
+  />
+</div>
+
+## Configuration
+
+Counters in Ladder Logic require input parameters for counting up (**CU**), counting down (**CD**), and resetting (**R**). The output parameters include Preset Value (**PV**), Current Value (**CV**), Output (**Q**), Output Up (**QU**), and Output Down (**QD**).
+
+The **CU** and **CD** inputs increment or decrement the **CV**, respectively, whenever they transition from false to true. The **R** input resets the **CV** to zero when it transitions from false to true.
+
+### Counter variable
+
+## Runtime Behavior
+
+The Counter function is executed in every cycle scan as long as the **CU**, **CD**, or **R** inputs are true. The **CV** is compared to the **PV** in each cycle, and the **Q**, **QU**, or **QD** outputs are set accordingly based on whether **CV** is equal to or greater than **PV**, or whether it's counting up or down.
+
+### CU (Count Up)
+
+<FunctionBlock
+  blockVarName={'CounterVariable'}
+  inOutNames={['CU', 'Q']}
+  params={{
+    in: [
+      { desc: 'R', varName: undefined, isRequired: false, value: false },
+      { desc: 'PV', varName: undefined, isRequired: false, value: 8 },
+    ],
+    out: [, { desc: 'CV', varName: undefined, isRequired: false, value: 5 }],
+  }}
+  type={'CTU'}
+/>
+
+### CTD (Count Down)
+
+<FunctionBlock
+  blockVarName={'CounterVariable'}
+  inOutNames={['CD', 'QD']}
+  params={{
+    in: [
+      { desc: 'LD', varName: undefined, isRequired: false, value: false },
+      { desc: 'PV', varName: undefined, isRequired: false, value: 8 },
+    ],
+    out: [, { desc: 'CV', varName: undefined, isRequired: false, value: 5 }],
+  }}
+  type={'CTD'}
+
+/>
+
+### CTUD (Count Up Down)
+
+<FunctionBlock
+  blockVarName={'CounterVariable'}
+  inOutNames={['CU', 'QU']}
+  params={{
+    in: [
+      { desc: 'CD', varName: undefined, isRequired: false, value: false },
+      { desc: 'R', varName: undefined, isRequired: false, value: false },
+      { desc: 'LD', varName: undefined, isRequired: false, value: false },
+      { desc: 'PV', varName: undefined, isRequired: false, value: 8 },
+    ],
+    out: [{ desc: 'QD', varName: undefined, isRequired: false, value: false }, , , { desc: 'CV', varName: undefined, isRequired: false, value: 3 }],
+  }}
+  type={'CTUD'}
+/>
+
+## Examples
+
+- [Basic Count Up example](https://app.plcsimulator.online/lGAra7y0IBTyveim0Rsp)
+- [Count Down with Reset example](https://app.plcsimulator.online/nylRtY9YWjHJozVsE22L)
