@@ -2,7 +2,7 @@
   "name": "plc-simulator-doc",
   "description": "PLC Simulator Documentation",
   "title": "PLC Simulator Online",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "private": true,
   "scripts": {
     "dev": "next dev",
