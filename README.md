@@ -1,10 +1,10 @@
 # PLC Simulator Online Documentation Project
 
-Welcome to the PLC Simulator Online Documentation Project! This project aims to create comprehensive, user-friendly documentation for our open-source PLC simulator. 
+Welcome to the PLC Simulator Online Documentation Project! This project aims to create comprehensive, user-friendly documentation for our PLC simulator. 
 
 ## About
 
-This documentation is intended to serve as a complete guide for users and contributors to the PLC simulator. We aim to provide clear, concise information and tutorials to assist with using the simulator to its full potential. 
+This documentation is intended to serve as a complete guide for users of the PLC simulator. We aim to provide clear, concise information and tutorials to assist with using the simulator to its full potential. 
 
 ## Contributing
 
