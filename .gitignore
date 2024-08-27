@@ -42,3 +42,6 @@ firebase-debug.log
 /public/sitemap.xml
 /public/sitemap-*.xml
 /public/robots.txt
+
+# misc
+/.vscode
