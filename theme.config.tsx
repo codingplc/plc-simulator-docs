@@ -76,6 +76,11 @@ const config: DocsThemeConfig = {
       titleTemplate,
     };
   },
+  gitTimestamp({ timestamp }) {
+    const { asPath } = useRouter();
+    if (asPath === '/') return null;
+    return <span>Last updated on {timestamp.toLocaleDateString()}</span>;
+  },
 };
 
 export default config;
