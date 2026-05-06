@@ -10,11 +10,9 @@ export default function Conveyor() {
       <div className="gap-8 items-center py-8 mx-auto xl:gap-16 md:grid md:grid-cols-2 sm:py-8">
         <div className="mt-4 md:mt-0 mb-8">
           <p className="mb-6 font-light md:text-lg">
-            Play around with our Conveyor Simulator, linked with PLC Simulator Online. This tool has
-            an older look but it lets you see your Ladder Logic diagram in action. Make your
-            program, hit simulate, and watch how it changes the machine model. Even though
-            we&apos;ll soon replace it with a new Virtual Panel, this tool is still very useful.
-            When you&apos;re finished, don&apos;t forget to share your project.
+            A legacy companion to PLC Simulator Online — write a Ladder Logic program, hit simulate,
+            and watch the machine model react. Great for visualising real-world I/O behavior and
+            sharing your finished project with others.
           </p>
           <p className="mb-6 font-light md:text-lg">
             Have fun with it. Don&apos;t worry, you can&apos;t break it.
