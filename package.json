@@ -6,12 +6,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "rm -rf .next && next build",
     "postbuild": "next-sitemap",
     "start": "npx serve@latest out",
     "lint": "next lint",
-    "deploy": "next build && next-sitemap && firebase deploy",
-    "deploy-beta": "next build && firebase hosting:channel:deploy beta"
+    "deploy": "yarn build && firebase deploy",
+    "deploy-beta": "yarn build && firebase hosting:channel:deploy beta"
   },
   "dependencies": {
     "firebase": "^10.5.2",
