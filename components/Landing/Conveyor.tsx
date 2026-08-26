@@ -11,7 +11,7 @@ export default function Conveyor() {
         <div className="mt-4 md:mt-0 mb-8">
           <p className="mb-6 font-light md:text-lg">
             A legacy companion to PLC Simulator Online — write a Ladder Logic program, hit simulate,
-            and watch the machine model react. Great for visualising real-world I/O behavior and
+            and watch the machine model react. Great for visualizing real-world I/O behavior and
             sharing your finished project with others.
           </p>
           <p className="mb-6 font-light md:text-lg">

@@ -59,7 +59,7 @@ export default function Features() {
             <h3 className="mb-2 text-xl font-bold dark:text-white">Simulate</h3>
             <p className="text-gray-500 dark:text-gray-400">
               Gone are the days of needing a real PLC to test your code. With our simulator, you can
-              bypass the need for physical controller. Once your ladder diagram is set, hit the
+              bypass the need for a physical controller. Once your ladder diagram is set, hit the
               Simulate button to execute your program. You can alter input states and monitor
               outputs seamlessly.
             </p>

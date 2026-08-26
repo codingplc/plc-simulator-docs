@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="gap-8 items-center py-8 mx-auto xl:gap-16 md:grid md:grid-cols-2 sm:py-8">
         <div className="mt-4 md:mt-0 mb-8">
           <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            Learning Ladder Logic was never easier than now!
+            Learning Ladder Logic has never been easier!
           </h2>
           <p className="mb-4 font-light md:text-lg">
             A free, browser-based Ladder Logic simulator for learning PLC programming — used by 250,000+ students, hobbyists, and engineers every year.
