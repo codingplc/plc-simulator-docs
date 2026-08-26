@@ -1,0 +1,19 @@
+# Structured Text (ST)
+
+Structured Text is one of the five programming languages defined by [IEC 61131-3](/docs/iec61131-3). It is a high-level, text-based language similar to Pascal: instead of drawing rungs, you write assignments, conditionals, and loops.
+
+```
+IF Start AND NOT Stop THEN
+    Motor := TRUE;
+ELSIF Stop THEN
+    Motor := FALSE;
+END_IF;
+```
+
+Ladder Diagram suits relay-style interlocking and anyone coming from electrical schematics. Structured Text suits arithmetic, state machines, and anything that would take a dozen rungs to express.
+
+## Is Structured Text supported in PLC Simulator Online?
+
+**No.** PLC Simulator Online only supports Ladder Diagram (LD), and the simulator is no longer in active development.
+
+To write Structured Text in the browser, use [studio.rungs.dev](https://studio.rungs.dev/?utm_source=plcsimulator.online&utm_medium=referral&utm_campaign=successor&utm_content=docs_structured-text_body) — the simulator I work on now, which runs Structured Text and Ladder Logic side by side. Its [Structured Text documentation](https://rungs.dev/docs/structured-text/what-is-structured-text?utm_source=plcsimulator.online&utm_medium=referral&utm_campaign=successor&utm_content=docs_structured-text_ref) covers the syntax in full.

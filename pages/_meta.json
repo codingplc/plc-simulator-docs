@@ -27,5 +27,10 @@
     "title": "PLC Simulator Online ↗",
     "href": "https://app.plcsimulator.online/",
     "newWindow": true
+  },
+  "rungs-link": {
+    "title": "studio.rungs.dev ↗",
+    "href": "https://studio.rungs.dev/?utm_source=plcsimulator.online&utm_medium=referral&utm_campaign=successor&utm_content=sidebar",
+    "newWindow": true
   }
 }

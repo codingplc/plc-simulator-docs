@@ -1,6 +1,7 @@
 import React from 'react';
 import { DocsThemeConfig } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
+import RungsCallout from '@/components/RungsCallout';
 
 const currentYear = new Date().getFullYear();
 
@@ -69,6 +70,14 @@ const config: DocsThemeConfig = {
       </a>
     ),
   },
+  main: ({ children }) => (
+    // RungsCallout picks the variant for the current route and renders nothing on the landing
+    // page, which already carries a full Rungs section.
+    <>
+      <RungsCallout />
+      {children}
+    </>
+  ),
   useNextSeoProps() {
     const { asPath } = useRouter();
     const titleTemplate = asPath === '/' ? 'PLC Simulator Online & Ladder Diagram Documentation' : '%s - Learn Ladder Logic';
