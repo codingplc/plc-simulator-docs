@@ -5,6 +5,39 @@ import RungsCallout from '@/components/RungsCallout';
 
 const currentYear = new Date().getFullYear();
 
+const DOCS_DESCRIPTION =
+  'Explore our comprehensive PLC Simulator Online Documentation for insightful guides on ladder logic creation, simulation, and sharing. Perfect your PLC programming skills and join our growing community of professionals and enthusiasts.';
+
+const HOME_TITLE = 'PLC Simulator Online is moving to Rungs Studio';
+const HOME_DESCRIPTION =
+  'PLC Simulator Online is moving to Rungs Studio, a free online PLC simulator with ladder logic, Structured Text, tests and an AI assistant. Bring your projects with one click.';
+
+/** The home page announces the move; every other page keeps the documentation's own tags. */
+function Head() {
+  const { asPath } = useRouter();
+  const home = asPath === '/';
+  const description = home ? HOME_DESCRIPTION : DOCS_DESCRIPTION;
+  const image = home ? 'https://plcsimulator.online/images/migration/video-cover.jpg' : 'https://plcsimulator.online/images/og-image.jpg';
+  return (
+    <>
+      <meta name="description" content={description} />
+
+      <meta property="og:url" content="https://plcsimulator.online/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={home ? HOME_TITLE : 'PLC Simulator Online - Learn & Master PLC Programming'} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:domain" content="plcsimulator.online" />
+      <meta property="twitter:url" content="https://plcsimulator.online/" />
+      <meta name="twitter:title" content={home ? HOME_TITLE : 'PLC Simulator Online Documentation - Learn & Master PLC Programming'} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+    </>
+  );
+}
+
 const config: DocsThemeConfig = {
   primaryHue: 200,
   logo: (
@@ -31,33 +64,7 @@ const config: DocsThemeConfig = {
   sidebar: {
     toggleButton: true,
   },
-  head: (
-    <>
-      <meta
-        name="description"
-        content="Explore our comprehensive PLC Simulator Online Documentation for insightful guides on ladder logic creation, simulation, and sharing. Perfect your PLC programming skills and join our growing community of professionals and enthusiasts."
-      />
-
-      <meta property="og:url" content="https://plcsimulator.online/" />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content="PLC Simulator Online - Learn & Master PLC Programming" />
-      <meta
-        property="og:description"
-        content="Explore our comprehensive PLC Simulator Online Documentation for insightful guides on ladder logic creation, simulation, and sharing. Perfect your PLC programming skills and join our growing community of professionals and enthusiasts."
-      />
-      <meta property="og:image" content="https://plcsimulator.online/images/og-image.jpg" />
-
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta property="twitter:domain" content="plcsimulator.online" />
-      <meta property="twitter:url" content="https://plcsimulator.online/" />
-      <meta name="twitter:title" content="PLC Simulator Online Documentation - Learn & Master PLC Programming" />
-      <meta
-        name="twitter:description"
-        content="Explore our comprehensive PLC Simulator Online Documentation for insightful guides on ladder logic creation, simulation, and sharing. Perfect your PLC programming skills and join our growing community of professionals and enthusiasts."
-      />
-      <meta name="twitter:image" content="https://plcsimulator.online/images/og-image.jpg" />
-    </>
-  ),
+  head: Head,
   navbar: {
     extraContent: (
       <a
@@ -72,7 +79,7 @@ const config: DocsThemeConfig = {
   },
   main: ({ children }) => (
     // RungsCallout picks the variant for the current route and renders nothing on the landing
-    // page, which already carries a full Rungs section.
+    // page, which is about the move to Rungs from top to bottom.
     <>
       <RungsCallout />
       {children}
@@ -80,7 +87,7 @@ const config: DocsThemeConfig = {
   ),
   useNextSeoProps() {
     const { asPath } = useRouter();
-    const titleTemplate = asPath === '/' ? 'PLC Simulator Online & Ladder Diagram Documentation' : '%s - Learn Ladder Logic';
+    const titleTemplate = asPath === '/' ? HOME_TITLE : '%s - Learn Ladder Logic';
     return {
       titleTemplate,
     };
